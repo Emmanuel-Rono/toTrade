@@ -1,15 +1,18 @@
 package com.reemmousa.toTrade.app
 
+
+import android.util.Base64
+
+
 object Constants {
     const val BASE_URL = "https://www.udemy.com/api-2.0/"
-    private const val UDEMY_API_KEY ="Basic eTNGZHJMSEhDaUFjR3JHVEkwRlJTY2ZNNTl1eEMzNF" +
-            "BCY0taOTRDVzo0cHUzT3REWXBCR2RROVJBWlhnNnRLMTE4WGRMcWlPSkx5Y2JNSFhFd2l4" +
-            "R1VieXV2cGRWTUp4RW1rN0VBdkxqdWQ3Y1dKaGJXelNZdTZYZmlBbW9JQmhxODFaanhNS1k3R0" +
-            "V2djRuS3htZGk1bWhoZ2Z3YWdsZHZSREx0bXpxcw=="
-
+    const val UDEMY_KEY="WXdqTW5pck52WVRCOFY4Q0d2dzA3ZGRr" +
+            "YVMxcTBWeFZBaGE4YkF4Rjp4git 21EOHI4OGdTdF" +
+            "Yxc3ZBMUU0eVlzUHVDTDNpYlgybUVxT3lvOE1hclI4UFg4ZGNveXQ2UGZrRURjRA=="
+    // Encode client_id and client_secret
     const val HEADER_ACCESS = "Accept: application/json, text/plain, */*"
     const val HEADER_CONTENT_TYPE = "Content-Type: application/json;charset=utf-8"
-    const val HEADER_AUTHORIZATION = "Authorization:$UDEMY_API_KEY"
+  const val HEADER_AUTHORIZATION  = "Authorization: Basic $UDEMY_KEY"
 
     const val UDEMY_BASE_URL = "https://www.udemy.com"
 

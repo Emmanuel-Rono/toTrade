@@ -14,7 +14,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface CoursesApi {
-    @Headers(*[HEADER_ACCESS, HEADER_CONTENT_TYPE, HEADER_AUTHORIZATION])
+    @Headers(HEADER_ACCESS, HEADER_CONTENT_TYPE, HEADER_AUTHORIZATION)
     @GET("courses/")
     suspend fun getCoursesList(
         @Query("search") searchString: String?,
@@ -22,7 +22,7 @@ interface CoursesApi {
         @Query("price") price: String?
     ): Response<ResponseCoursesList?>?
 
-    @Headers(*[HEADER_ACCESS, HEADER_CONTENT_TYPE, HEADER_AUTHORIZATION])
+    @Headers(HEADER_ACCESS, HEADER_CONTENT_TYPE, HEADER_AUTHORIZATION)
     @GET("courses/{courseID}")
     suspend fun getCourseDetails(
         @Path("courseID") courseID: String,
@@ -35,7 +35,7 @@ interface CoursesApi {
         @Query("page") pageNo: Int,
     ): Response<ResponseCourseReview?>?
 
-    @Headers(*[HEADER_ACCESS, HEADER_CONTENT_TYPE, HEADER_AUTHORIZATION])
+    @Headers(HEADER_ACCESS, HEADER_CONTENT_TYPE, HEADER_AUTHORIZATION)
     @GET("courses/{courseID}/public-curriculum-items")
     suspend fun getCourseLectures(
         @Path("courseID") courseID: String,

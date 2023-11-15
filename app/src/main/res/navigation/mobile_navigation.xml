@@ -39,7 +39,7 @@
         tools:layout="@layout/fragment_course_details">
         <argument
             android:name="selectedCourse"
-            app:argType="com.reemmousa.eduapp.dataStructures.courses.Course" />
+            app:argType="com.reemmousa.toTrade.dataStructures.courses.Course" />
     </fragment>
     <fragment
         android:id="@+id/navigation_search"
