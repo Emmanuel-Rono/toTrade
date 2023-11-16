@@ -11,7 +11,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.reemmousa.toTrade"
+        applicationId "com.rono.toTrade"
         minSdk 25
         targetSdk 33
         versionCode 3
@@ -37,7 +37,7 @@ android {
         viewBinding true
         dataBinding true
     }
-    namespace 'com.reemmousa.toTrade'
+    namespace 'com.rono.toTrade'
 }
 
 dependencies {

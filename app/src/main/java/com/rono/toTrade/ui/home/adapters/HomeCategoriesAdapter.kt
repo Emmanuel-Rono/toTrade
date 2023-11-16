@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.home.adapters
+package com.rono.toTrade.ui.home.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.dataStructures.HomeCategory
-import com.reemmousa.toTrade.ui.home.HomeFragmentDirections
-import com.reemmousa.toTrade.ui.search.SearchFragmentDirections
-import com.reemmousa.toTrade.ui.search.SearchViewModel
+import com.rono.toTrade.R
+import com.rono.toTrade.dataStructures.HomeCategory
+import com.rono.toTrade.ui.home.HomeFragmentDirections
 
 
 class HomeCategoriesAdapter(

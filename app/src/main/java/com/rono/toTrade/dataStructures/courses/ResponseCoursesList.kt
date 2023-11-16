@@ -1,6 +1,5 @@
-package com.reemmousa.toTrade.dataStructures.courses
+package com.rono.toTrade.dataStructures.courses
 
-import androidx.annotation.NonNull
 import com.google.gson.annotations.SerializedName
 
 data class ResponseCoursesList(

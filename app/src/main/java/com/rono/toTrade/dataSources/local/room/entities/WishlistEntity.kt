@@ -1,11 +1,9 @@
-package com.reemmousa.toTrade.dataSources.local.room.entities
+package com.rono.toTrade.dataSources.local.room.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.reemmousa.toTrade.app.Constants.COURSES_TABLE
-import com.reemmousa.toTrade.app.Constants.WISHLIST_TABLE
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.dataStructures.courses.ResponseCoursesList
+import com.rono.toTrade.app.Constants.WISHLIST_TABLE
+import com.rono.toTrade.dataStructures.courses.Course
 
 @Entity(tableName = WISHLIST_TABLE)
 class WishlistEntity(

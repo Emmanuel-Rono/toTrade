@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.wishlist
+package com.rono.toTrade.ui.wishlist
 
 import android.os.Bundle
 import android.view.*
@@ -6,13 +6,13 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.*
-import com.reemmousa.toTrade.dataSources.local.room.entities.WishlistEntity
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.databinding.FragmentWishlistBinding
-import com.reemmousa.toTrade.ui.adapters.CourseItemOperations
-import com.reemmousa.toTrade.ui.adapters.CoursesMainAdapter
+import com.rono.toTrade.R
+import com.rono.toTrade.app.*
+import com.rono.toTrade.dataSources.local.room.entities.WishlistEntity
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.databinding.FragmentWishlistBinding
+import com.rono.toTrade.ui.adapters.CourseItemOperations
+import com.rono.toTrade.ui.adapters.CoursesMainAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

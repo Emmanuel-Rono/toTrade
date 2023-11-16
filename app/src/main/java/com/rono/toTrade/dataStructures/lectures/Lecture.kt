@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.dataStructures.lectures
+package com.rono.toTrade.dataStructures.lectures
 
 
 import com.google.gson.annotations.SerializedName

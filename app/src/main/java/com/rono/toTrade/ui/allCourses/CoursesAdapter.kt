@@ -1,7 +1,7 @@
-package com.reemmousa.toTrade.ui.allCourses
+package com.rono.toTrade.ui.allCourses
 
-import com.reemmousa.toTrade.ui.adapters.CourseItemOperations
-import com.reemmousa.toTrade.ui.adapters.CoursesMainAdapter
+import com.rono.toTrade.ui.adapters.CourseItemOperations
+import com.rono.toTrade.ui.adapters.CoursesMainAdapter
 
 class CoursesAdapter(courseItemOperations: CourseItemOperations) :
     CoursesMainAdapter(courseItemOperations)

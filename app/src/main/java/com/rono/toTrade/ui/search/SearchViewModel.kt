@@ -1,14 +1,14 @@
-package com.reemmousa.toTrade.ui.search
+package com.rono.toTrade.ui.search
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.NetworkResult
-import com.reemmousa.toTrade.app.hasInternetConnection
-import com.reemmousa.toTrade.dataStructures.courses.ResponseCoursesList
-import com.reemmousa.toTrade.repository.Repository
+import com.rono.toTrade.R
+import com.rono.toTrade.app.NetworkResult
+import com.rono.toTrade.app.hasInternetConnection
+import com.rono.toTrade.dataStructures.courses.ResponseCoursesList
+import com.rono.toTrade.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response

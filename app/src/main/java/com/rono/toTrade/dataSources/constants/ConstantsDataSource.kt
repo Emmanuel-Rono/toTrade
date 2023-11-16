@@ -1,10 +1,10 @@
-package com.reemmousa.toTrade.dataSources.constants
+package com.rono.toTrade.dataSources.constants
 
 import android.app.Application
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.Constants
-import com.reemmousa.toTrade.app.loadDrawable
-import com.reemmousa.toTrade.dataStructures.HomeCategory
+import com.rono.toTrade.R
+import com.rono.toTrade.app.Constants
+import com.rono.toTrade.app.loadDrawable
+import com.rono.toTrade.dataStructures.HomeCategory
 import javax.inject.Inject
 
 class ConstantsDataSource @Inject constructor(

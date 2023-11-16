@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.dataStructures.filter
+package com.rono.toTrade.dataStructures.filter
 
 data class FilterPrefs(
     val selectedCoursePrice: String,

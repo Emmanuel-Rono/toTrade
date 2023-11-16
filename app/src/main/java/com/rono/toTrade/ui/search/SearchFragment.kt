@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.search
+package com.rono.toTrade.ui.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,13 +10,13 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.*
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.databinding.FragmentSearchBinding
-import com.reemmousa.toTrade.ui.adapters.CourseItemOperations
-import com.reemmousa.toTrade.ui.search.adapters.ResultSearchAdapter
-import com.reemmousa.toTrade.ui.search.adapters.TopSearchAdapter
+import com.rono.toTrade.R
+import com.rono.toTrade.app.*
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.databinding.FragmentSearchBinding
+import com.rono.toTrade.ui.adapters.CourseItemOperations
+import com.rono.toTrade.ui.search.adapters.ResultSearchAdapter
+import com.rono.toTrade.ui.search.adapters.TopSearchAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

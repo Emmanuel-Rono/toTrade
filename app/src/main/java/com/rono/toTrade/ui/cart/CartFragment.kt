@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.cart
+package com.rono.toTrade.ui.cart
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.invisible
-import com.reemmousa.toTrade.app.updateStatusBarColor
-import com.reemmousa.toTrade.app.visible
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.databinding.FragmentCartBinding
+import com.rono.toTrade.R
+import com.rono.toTrade.app.invisible
+import com.rono.toTrade.app.updateStatusBarColor
+import com.rono.toTrade.app.visible
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.databinding.FragmentCartBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Exception
 

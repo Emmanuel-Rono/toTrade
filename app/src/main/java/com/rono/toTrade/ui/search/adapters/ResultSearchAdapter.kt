@@ -1,7 +1,7 @@
-package com.reemmousa.toTrade.ui.search.adapters
+package com.rono.toTrade.ui.search.adapters
 
-import com.reemmousa.toTrade.ui.adapters.CourseItemOperations
-import com.reemmousa.toTrade.ui.adapters.CoursesMainAdapter
+import com.rono.toTrade.ui.adapters.CourseItemOperations
+import com.rono.toTrade.ui.adapters.CoursesMainAdapter
 
 class ResultSearchAdapter(courseItemOperations: CourseItemOperations) :
     CoursesMainAdapter(courseItemOperations) {

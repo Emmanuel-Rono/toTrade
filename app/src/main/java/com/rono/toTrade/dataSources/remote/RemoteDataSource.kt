@@ -1,10 +1,10 @@
-package com.reemmousa.toTrade.dataSources.remote
+package com.rono.toTrade.dataSources.remote
 
-import com.reemmousa.toTrade.dataSources.remote.retrofit.CoursesApi
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.dataStructures.courses.ResponseCoursesList
-import com.reemmousa.toTrade.dataStructures.lectures.ResponseCourseLectures
-import com.reemmousa.toTrade.dataStructures.reviews.ResponseCourseReview
+import com.rono.toTrade.dataSources.remote.retrofit.CoursesApi
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.dataStructures.courses.ResponseCoursesList
+import com.rono.toTrade.dataStructures.lectures.ResponseCourseLectures
+import com.rono.toTrade.dataStructures.reviews.ResponseCourseReview
 import retrofit2.Response
 import javax.inject.Inject
 

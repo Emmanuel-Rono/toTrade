@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.dataStructures.reviews
+package com.rono.toTrade.dataStructures.reviews
 
 
 import com.google.gson.annotations.SerializedName

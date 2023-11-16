@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.dataStructures.courses
+package com.rono.toTrade.dataStructures.courses
 
 
 import android.os.Parcelable

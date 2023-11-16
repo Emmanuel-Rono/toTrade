@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.allCourses
+package com.rono.toTrade.ui.allCourses
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.NetworkResult
-import com.reemmousa.toTrade.app.showSnackBar
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.databinding.FragmentAllCoursesBinding
-import com.reemmousa.toTrade.ui.adapters.CourseItemOperations
+import com.rono.toTrade.R
+import com.rono.toTrade.app.NetworkResult
+import com.rono.toTrade.app.showSnackBar
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.databinding.FragmentAllCoursesBinding
+import com.rono.toTrade.ui.adapters.CourseItemOperations
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

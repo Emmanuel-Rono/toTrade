@@ -1,7 +1,7 @@
-package com.reemmousa.toTrade.ui.adapters
+package com.rono.toTrade.ui.adapters
 
 import android.util.Log
-import com.reemmousa.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.dataStructures.courses.Course
 
 interface CourseItemOperations {
     fun onCourseClicked(course: Course) {

@@ -1,13 +1,12 @@
-package com.reemmousa.toTrade.ui.search.adapters
+package com.rono.toTrade.ui.search.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.activity.viewModels
 import androidx.recyclerview.widget.RecyclerView
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.ui.search.SearchViewModel
+import com.rono.toTrade.R
+import com.rono.toTrade.ui.search.SearchViewModel
 
 class TopSearchAdapter(private val data: List<String>, private val searchViewModel: SearchViewModel) : RecyclerView.Adapter<TopSearchAdapter.TopSearchVH>() {
 

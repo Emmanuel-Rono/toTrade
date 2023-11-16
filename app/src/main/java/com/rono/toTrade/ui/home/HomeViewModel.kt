@@ -1,9 +1,9 @@
-package com.reemmousa.toTrade.ui.home
+package com.rono.toTrade.ui.home
 
 import android.app.Application
-import com.reemmousa.toTrade.dataStructures.HomeCategory
-import com.reemmousa.toTrade.repository.Repository
-import com.reemmousa.toTrade.ui.allCourses.AllCoursesViewModel
+import com.rono.toTrade.dataStructures.HomeCategory
+import com.rono.toTrade.repository.Repository
+import com.rono.toTrade.ui.allCourses.AllCoursesViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

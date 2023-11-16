@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.courseDetails.adapters
+package com.rono.toTrade.ui.courseDetails.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.dataStructures.reviews.Review
+import com.rono.toTrade.R
+import com.rono.toTrade.dataStructures.reviews.Review
 
 class ReviewsAdapter :
     RecyclerView.Adapter<ReviewsAdapter.CustomVH>() {

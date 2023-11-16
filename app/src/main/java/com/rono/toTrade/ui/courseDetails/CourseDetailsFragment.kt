@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.courseDetails
+package com.rono.toTrade.ui.courseDetails
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -11,18 +11,18 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.button.MaterialButton
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.*
-import com.reemmousa.toTrade.dataSources.local.room.entities.CartEntity
-import com.reemmousa.toTrade.dataSources.local.room.entities.WishlistEntity
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.dataStructures.reviews.ResponseCourseReview
-import com.reemmousa.toTrade.databinding.FragmentCourseDetailsBinding
-import com.reemmousa.toTrade.ui.cart.CartViewModel
-import com.reemmousa.toTrade.ui.courseDetails.adapters.InstructorsAdapter
-import com.reemmousa.toTrade.ui.courseDetails.adapters.LecturesAdapter
-import com.reemmousa.toTrade.ui.courseDetails.adapters.ReviewsAdapter
-import com.reemmousa.toTrade.ui.wishlist.WishlistViewModel
+import com.rono.toTrade.R
+import com.rono.toTrade.app.*
+import com.rono.toTrade.dataSources.local.room.entities.CartEntity
+import com.rono.toTrade.dataSources.local.room.entities.WishlistEntity
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.dataStructures.reviews.ResponseCourseReview
+import com.rono.toTrade.databinding.FragmentCourseDetailsBinding
+import com.rono.toTrade.ui.cart.CartViewModel
+import com.rono.toTrade.ui.courseDetails.adapters.InstructorsAdapter
+import com.rono.toTrade.ui.courseDetails.adapters.LecturesAdapter
+import com.rono.toTrade.ui.courseDetails.adapters.ReviewsAdapter
+import com.rono.toTrade.ui.wishlist.WishlistViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

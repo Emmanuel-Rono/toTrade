@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.home.adapters
+package com.rono.toTrade.ui.home.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.loadImageWithPicasso
-import com.reemmousa.toTrade.app.viewLinkOnUdemy
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.ui.home.HomeFragmentDirections
+import com.rono.toTrade.R
+import com.rono.toTrade.app.loadImageWithPicasso
+import com.rono.toTrade.app.viewLinkOnUdemy
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.ui.home.HomeFragmentDirections
 
 
 class HomeCoursesAdapter(

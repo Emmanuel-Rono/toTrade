@@ -1,9 +1,9 @@
-package com.reemmousa.toTrade.repository
+package com.rono.toTrade.repository
 
-import com.reemmousa.toTrade.dataSources.constants.ConstantsDataSource
-import com.reemmousa.toTrade.dataSources.dataStore.DataStoreRepo
-import com.reemmousa.toTrade.dataSources.local.LocalDataSource
-import com.reemmousa.toTrade.dataSources.remote.RemoteDataSource
+import com.rono.toTrade.dataSources.constants.ConstantsDataSource
+import com.rono.toTrade.dataSources.dataStore.DataStoreRepo
+import com.rono.toTrade.dataSources.local.LocalDataSource
+import com.rono.toTrade.dataSources.remote.RemoteDataSource
 import dagger.hilt.android.scopes.ActivityRetainedScoped
 import javax.inject.Inject
 

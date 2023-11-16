@@ -1,14 +1,9 @@
-package com.reemmousa.toTrade.app
-
-
-import android.util.Base64
+package com.rono.toTrade.app
 
 
 object Constants {
     const val BASE_URL = "https://www.udemy.com/api-2.0/"
-    const val UDEMY_KEY="WXdqTW5pck52WVRCOFY4Q0d2dzA3ZGRr" +
-            "YVMxcTBWeFZBaGE4YkF4Rjp4git 21EOHI4OGdTdF" +
-            "Yxc3ZBMUU0eVlzUHVDTDNpYlgybUVxT3lvOE1hclI4UFg4ZGNveXQ2UGZrRURjRA=="
+    const val UDEMY_KEY="WXdqTW5pck52WVRCOFY4Q0d2dzA3ZGRrYVMxcTBWeFZBaGE4YkF4Rjp4dVhMcTk4RHJOWERVVWdyRjRQdTFZM09uNWdRUU1RU2wzanlmd3IwWUpNYXJqOVB4aEt4Q3FITmpzYzhhNVE4NEVxOEVxR21EOHI4OGdTdFYxc3ZBMUU0eVlzUHVDTDNpYlgybUVxT3lvOE1hclI4UFg4ZGNveXQ2UGZrRURjRA=="
     // Encode client_id and client_secret
     const val HEADER_ACCESS = "Accept: application/json, text/plain, */*"
     const val HEADER_CONTENT_TYPE = "Content-Type: application/json;charset=utf-8"

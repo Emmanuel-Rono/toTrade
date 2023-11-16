@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.app
+package com.rono.toTrade.app
 
 import android.content.Context
 import android.net.ConnectivityManager

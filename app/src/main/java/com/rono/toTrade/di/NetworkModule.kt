@@ -1,7 +1,7 @@
-package com.reemmousa.toTrade.di
+package com.rono.toTrade.di
 
-import com.reemmousa.toTrade.app.Constants.BASE_URL
-import com.reemmousa.toTrade.dataSources.remote.retrofit.CoursesApi
+import com.rono.toTrade.app.Constants.BASE_URL
+import com.rono.toTrade.dataSources.remote.retrofit.CoursesApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

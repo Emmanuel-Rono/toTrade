@@ -1,9 +1,9 @@
-package com.reemmousa.toTrade.di
+package com.rono.toTrade.di
 
 import android.content.Context
 import androidx.room.Room
-import com.reemmousa.toTrade.app.Constants.DATABASE_NAME
-import com.reemmousa.toTrade.dataSources.local.room.CoursesDatabase
+import com.rono.toTrade.app.Constants.DATABASE_NAME
+import com.rono.toTrade.dataSources.local.room.CoursesDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

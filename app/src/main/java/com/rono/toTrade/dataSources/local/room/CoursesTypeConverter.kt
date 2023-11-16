@@ -1,10 +1,10 @@
-package com.reemmousa.toTrade.dataSources.local.room
+package com.rono.toTrade.dataSources.local.room
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.dataStructures.courses.ResponseCoursesList
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.dataStructures.courses.ResponseCoursesList
 
 class CoursesTypeConverter {
     var gson = Gson()

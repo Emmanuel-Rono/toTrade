@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.app
+package com.rono.toTrade.app
 
 sealed class NetworkResult<T>(
     val data: T? = null,

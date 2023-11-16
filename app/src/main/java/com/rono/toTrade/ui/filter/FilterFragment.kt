@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.filter
+package com.rono.toTrade.ui.filter
 
 import android.os.Bundle
 import android.util.Log
@@ -12,11 +12,11 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
-import com.reemmousa.toTrade.app.Constants
-import com.reemmousa.toTrade.dataSources.dataStore.DataStoreRepo
-import com.reemmousa.toTrade.dataStructures.filter.FilterPrefs
-import com.reemmousa.toTrade.databinding.FragmentFilterBinding
-import com.reemmousa.toTrade.ui.allCourses.AllCoursesViewModel
+import com.rono.toTrade.app.Constants
+import com.rono.toTrade.dataSources.dataStore.DataStoreRepo
+import com.rono.toTrade.dataStructures.filter.FilterPrefs
+import com.rono.toTrade.databinding.FragmentFilterBinding
+import com.rono.toTrade.ui.allCourses.AllCoursesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

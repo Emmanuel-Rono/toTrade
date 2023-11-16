@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.reemmousa.toTrade.ui.home.HomeFragment"
+        android:name="com.rono.toTrade.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -23,27 +23,27 @@
 
     <fragment
         android:id="@+id/navigation_wishlist"
-        android:name="com.reemmousa.toTrade.ui.wishlist.WishlistFragment"
+        android:name="com.rono.toTrade.ui.wishlist.WishlistFragment"
         android:label="@string/title_Wishlist"
         tools:layout="@layout/fragment_wishlist" />
 
     <fragment
         android:id="@+id/navigation_cart"
-        android:name="com.reemmousa.toTrade.ui.cart.CartFragment"
+        android:name="com.rono.toTrade.ui.cart.CartFragment"
         android:label="@string/title_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/courseDetailsFragment"
-        android:name="com.reemmousa.toTrade.ui.courseDetails.CourseDetailsFragment"
+        android:name="com.rono.toTrade.ui.courseDetails.CourseDetailsFragment"
         android:label="@string/course_details"
         tools:layout="@layout/fragment_course_details">
         <argument
             android:name="selectedCourse"
-            app:argType="com.reemmousa.toTrade.dataStructures.courses.Course" />
+            app:argType="com.rono.toTrade.dataStructures.courses.Course" />
     </fragment>
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.reemmousa.toTrade.ui.search.SearchFragment"
+        android:name="com.rono.toTrade.ui.search.SearchFragment"
         android:label="@string/search"
         tools:layout="@layout/fragment_search">
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/allCoursesFragment"
-        android:name="com.reemmousa.toTrade.ui.allCourses.AllCoursesFragment"
+        android:name="com.rono.toTrade.ui.allCourses.AllCoursesFragment"
         android:label="@string/all_courses"
         tools:layout="@layout/fragment_all_courses">
         <action
@@ -72,7 +72,7 @@
     </fragment>
     <dialog
         android:id="@+id/filterFragment"
-        android:name="com.reemmousa.toTrade.ui.filter.FilterFragment"
+        android:name="com.rono.toTrade.ui.filter.FilterFragment"
         android:label="fragment_filter"
         tools:layout="@layout/fragment_filter" >
         <action

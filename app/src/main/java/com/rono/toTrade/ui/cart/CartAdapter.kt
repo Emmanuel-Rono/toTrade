@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.ui.cart
+package com.rono.toTrade.ui.cart
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +7,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.loadImageWithPicasso
-import com.reemmousa.toTrade.dataSources.local.room.entities.CartEntity
+import com.rono.toTrade.R
+import com.rono.toTrade.app.loadImageWithPicasso
+import com.rono.toTrade.dataSources.local.room.entities.CartEntity
 
 open class CartAdapter(private val cartViewModel: CartViewModel) :
     RecyclerView.Adapter<CartAdapter.MainCoursesVH>() {

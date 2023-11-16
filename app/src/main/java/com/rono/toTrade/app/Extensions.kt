@@ -1,4 +1,4 @@
-package com.reemmousa.toTrade.app
+package com.rono.toTrade.app
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -20,7 +20,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.google.android.material.snackbar.Snackbar
-import com.reemmousa.toTrade.R
+import com.rono.toTrade.R
 import com.squareup.picasso.Picasso
 
 const val TAG = "Extensions"

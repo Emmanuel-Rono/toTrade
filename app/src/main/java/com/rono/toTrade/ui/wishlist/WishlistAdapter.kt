@@ -1,7 +1,7 @@
-package com.reemmousa.toTrade.ui.wishlist
+package com.rono.toTrade.ui.wishlist
 
-import com.reemmousa.toTrade.ui.adapters.CourseItemOperations
-import com.reemmousa.toTrade.ui.adapters.CoursesMainAdapter
+import com.rono.toTrade.ui.adapters.CourseItemOperations
+import com.rono.toTrade.ui.adapters.CoursesMainAdapter
 
 class WishlistAdapter(private val courseItemOperations: CourseItemOperations) :
     CoursesMainAdapter(courseItemOperations) {

@@ -1,15 +1,12 @@
-package com.reemmousa.toTrade.ui.courseDetails.adapters
+package com.rono.toTrade.ui.courseDetails.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.app.loadImageWithPicasso
-import com.reemmousa.toTrade.app.viewLinkOnUdemy
-import com.reemmousa.toTrade.dataStructures.courses.VisibleInstructor
-import com.reemmousa.toTrade.dataStructures.lectures.Lecture
+import com.rono.toTrade.R
+import com.rono.toTrade.dataStructures.lectures.Lecture
 
 
 class LecturesAdapter :

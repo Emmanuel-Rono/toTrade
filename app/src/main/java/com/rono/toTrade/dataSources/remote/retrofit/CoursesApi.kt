@@ -1,12 +1,12 @@
-package com.reemmousa.toTrade.dataSources.remote.retrofit
+package com.rono.toTrade.dataSources.remote.retrofit
 
-import com.reemmousa.toTrade.app.Constants.HEADER_ACCESS
-import com.reemmousa.toTrade.app.Constants.HEADER_AUTHORIZATION
-import com.reemmousa.toTrade.app.Constants.HEADER_CONTENT_TYPE
-import com.reemmousa.toTrade.dataStructures.courses.Course
-import com.reemmousa.toTrade.dataStructures.courses.ResponseCoursesList
-import com.reemmousa.toTrade.dataStructures.lectures.ResponseCourseLectures
-import com.reemmousa.toTrade.dataStructures.reviews.ResponseCourseReview
+import com.rono.toTrade.app.Constants.HEADER_ACCESS
+import com.rono.toTrade.app.Constants.HEADER_AUTHORIZATION
+import com.rono.toTrade.app.Constants.HEADER_CONTENT_TYPE
+import com.rono.toTrade.dataStructures.courses.Course
+import com.rono.toTrade.dataStructures.courses.ResponseCoursesList
+import com.rono.toTrade.dataStructures.lectures.ResponseCourseLectures
+import com.rono.toTrade.dataStructures.reviews.ResponseCourseReview
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
