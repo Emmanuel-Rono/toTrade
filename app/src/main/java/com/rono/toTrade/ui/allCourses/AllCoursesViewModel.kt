@@ -36,11 +36,13 @@ open class AllCoursesViewModel @Inject constructor(
     val allCoursesResponse: MutableLiveData<NetworkResult<ResponseCoursesList>> = MutableLiveData()
 
     /** Local DB */
+val data=MutableLiveData<List<CoursesEntity>>()
+val _data : LiveData<List<CoursesEntity>> =data // we are assigning the value of CourseEntity data to _data
 
-    val coursesInDatabase: LiveData<List<CoursesEntity>> = repository.local.readCourses().asLiveData()
+    val coursesInDatabase: LiveData<List<CoursesEntity>> = repository.local.readCourses().asLiveData() //reads local data as LiveData
 
-    private fun insertCourses(coursesEntity: CoursesEntity) =
-        viewModelScope.launch(Dispatchers.IO) {
+    //insert ti da
+    private fun insertCourses(coursesEntity: CoursesEntity) = viewModelScope.launch(Dispatchers.IO) {
             repository.local.insertCourses(coursesEntity)
         }
 
