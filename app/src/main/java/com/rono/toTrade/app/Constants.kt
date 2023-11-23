@@ -38,5 +38,14 @@ object Constants {
     const val WISHLIST_TABLE = "wishlist_table"
     const val CART_TABLE = "cart_table"
 
-    const val PRIVACY_POLICY_URL = "https://github.com/ReemHazzaa/EduApp/blob/master/PrivacyPolicy.md#contact"
+
+  const val PRIVACY_POLICY_URL = "https://github.com/ReemHazzaa/EduApp/blob/master/PrivacyPolicy.md#contact"
+
+
+  object Constants {
+    const val CONSUMER_SECRET="VyYS5Cp8CVhLnAFP"
+    const val CONSUMER_KEY="0YTxkerRspqwmiqqw3th223MYuQl1tXj"
+    const val PASS_KEY="MFlUeGtlclJzcHF3bWlxcXczdGgyMjNNWXVRbDF0WGo6VnlZUzVDcDhDVmhMbkFGUA=="
+  }
+
 }

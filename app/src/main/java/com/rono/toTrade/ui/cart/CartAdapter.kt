@@ -6,13 +6,19 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.rono.toTrade.R
 import com.rono.toTrade.app.loadImageWithPicasso
 import com.rono.toTrade.dataSources.local.room.entities.CartEntity
 
-open class CartAdapter(private val cartViewModel: CartViewModel) :
+class CartAdapter(private val cartViewModel: CartViewModel, var BuyClickListener: onViewClickListener) :
     RecyclerView.Adapter<CartAdapter.MainCoursesVH>() {
+    //CLick Listener interface
+    interface onViewClickListener {
+        fun onBuyBtnClicked( item:CartEntity)
+
+    }
 
     private var data: List<CartEntity?>? = mutableListOf()
 
@@ -46,6 +52,11 @@ open class CartAdapter(private val cartViewModel: CartViewModel) :
             btRemove.setOnClickListener {
                 if (current != null) {
                     cartViewModel.deleteCourseFromCart(current)
+                }
+            }
+            btBuy.setOnClickListener {
+                if (current != null) {
+                    BuyClickListener.onBuyBtnClicked(current)
                 }
             }
         }

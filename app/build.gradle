@@ -78,19 +78,13 @@ dependencies {
 
     // Kotlin-coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-
     // lifecycle
     def lifecycle_ver = '2.5.1'
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:${lifecycle_ver}"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycle_ver}"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle_ver}"
-
     // Picasso
     implementation 'com.squareup.picasso:picasso:2.5.2'
-
     implementation "androidx.datastore:datastore-preferences:1.0.0"
-    //Mpesa
-    implementation 'com.github.bensalcie:payhero-android-mpesa:0.1.6'
-    implementation 'com.github.jumadeveloper:networkmanager:0.0.2'
 
 }
