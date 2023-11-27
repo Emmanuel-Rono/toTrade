@@ -3,7 +3,7 @@ package com.rono.toTrade.ui.allCourses
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.*
-import com.reemmousa.toTrade.R
+import com.rono.toTrade.R
 import com.rono.toTrade.app.Constants
 import com.rono.toTrade.app.Constants.COURSE_PRICE_FREE
 import com.rono.toTrade.app.Constants.COURSE_PRICE_PAID
@@ -161,7 +161,6 @@ val _data : LiveData<List<CoursesEntity>> =data // we are assigning the value of
             }
         }
     }
-
     data class FilterParameters(
         var category: String? = null,
         var price: String? = null,

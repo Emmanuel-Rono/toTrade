@@ -12,16 +12,14 @@ import com.rono.toTrade.R
 import com.rono.toTrade.app.loadImageWithPicasso
 import com.rono.toTrade.dataSources.local.room.entities.CartEntity
 
-class CartAdapter(private val cartViewModel: CartViewModel, var BuyClickListener: onViewClickListener) :
+open class CartAdapter(private val cartViewModel: CartViewModel) :
+//open class CartAdapter(private val cartViewModel: CartViewModel, var BuyClickListener: onViewClickListener) :
     RecyclerView.Adapter<CartAdapter.MainCoursesVH>() {
     //CLick Listener interface
-    interface onViewClickListener {
-        fun onBuyBtnClicked( item:CartEntity)
-
-    }
-
     private var data: List<CartEntity?>? = mutableListOf()
-
+    //interface onViewClickListener {
+    //    fun onBuyBtnClicked( item:CartEntity)
+   // }
     class MainCoursesVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvCourseName: TextView = itemView.findViewById(R.id.tv_course_name)
         val tvInstructors: TextView = itemView.findViewById(R.id.tv_instructors)
@@ -40,14 +38,13 @@ class CartAdapter(private val cartViewModel: CartViewModel, var BuyClickListener
 
     override fun onBindViewHolder(holder: MainCoursesVH, position: Int) {
         val current = data?.get(position)
+
         holder.apply {
             tvCourseName.text = current?.course?.title.toString()
-            tvInstructors.text =
-                current?.course?.visibleInstructors?.getOrNull(0)?.displayName ?: ""
+            tvInstructors.text = current?.course?.visibleInstructors?.getOrNull(0)?.displayName ?: ""
             tvCoursePrice.text = current?.course?.price.toString()
             ivCourse.loadImageWithPicasso(current?.course?.image240x135.toString())
-            ivInstructor.loadImageWithPicasso(
-                current?.course?.visibleInstructors?.getOrNull(0)?.image50x50.toString()
+            ivInstructor.loadImageWithPicasso(current?.course?.visibleInstructors?.getOrNull(0)?.image50x50.toString()
             )
             btRemove.setOnClickListener {
                 if (current != null) {
@@ -56,7 +53,7 @@ class CartAdapter(private val cartViewModel: CartViewModel, var BuyClickListener
             }
             btBuy.setOnClickListener {
                 if (current != null) {
-                    BuyClickListener.onBuyBtnClicked(current)
+
                 }
             }
         }

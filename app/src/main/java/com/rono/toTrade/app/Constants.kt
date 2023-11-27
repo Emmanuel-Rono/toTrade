@@ -39,7 +39,7 @@ object Constants {
     const val CART_TABLE = "cart_table"
 
 
-  const val PRIVACY_POLICY_URL = "https://github.com/ReemHazzaa/EduApp/blob/master/PrivacyPolicy.md#contact"
+  const val PRIVACY_POLICY_URL = "https://github.com/Emmanuel-Rono/toTrade/blob/main/PrivacyPolicy.html"
 
 
   object Constants {

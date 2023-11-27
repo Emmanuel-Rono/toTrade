@@ -5,15 +5,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
+
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.reemmousa.toTrade.R
-import com.reemmousa.toTrade.databinding.FragmentHomeBinding
-
-
+import com.rono.toTrade.R
 import com.rono.toTrade.app.*
+import com.rono.toTrade.databinding.FragmentHomeBinding
 
 import com.rono.toTrade.ui.home.adapters.HomeCategoriesAdapter
 import com.rono.toTrade.ui.home.adapters.HomeCoursesAdapter
