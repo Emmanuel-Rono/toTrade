@@ -19,13 +19,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/empty_cart" />
-
         <TextView
             android:gravity="center"
             android:id="@+id/tvError"
@@ -36,7 +34,6 @@
             android:text="@string/empty_cart_msg"
             android:textColor="@color/black"
             android:textSize="18sp" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_courses"
             android:layout_width="match_parent"

@@ -44,11 +44,10 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.0'
-    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     // Navigation
-    def nav_version = "2.5.2"
+    def nav_version = "2.6.2"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -79,12 +78,15 @@ dependencies {
     // Kotlin-coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
     // lifecycle
-    def lifecycle_ver = '2.5.1'
+    def lifecycle_ver = '2.6.2'
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:${lifecycle_ver}"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycle_ver}"
+    //noinspection GradleDependency
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle_ver}"
     // Picasso
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    implementation 'com.google.android.material:material:1.10.0'
 
 }

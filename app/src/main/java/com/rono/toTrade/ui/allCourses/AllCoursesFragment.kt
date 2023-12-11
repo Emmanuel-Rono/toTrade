@@ -22,7 +22,6 @@ class AllCoursesFragment : Fragment(), CourseItemOperations {
     private val args by navArgs<AllCoursesFragmentArgs>()
     private var _binding: FragmentAllCoursesBinding? = null
     private val binding get() = _binding!!
-
     private val viewModel: AllCoursesViewModel by viewModels()
     private val coursesAdapter: CoursesAdapter by lazy {
         CoursesAdapter(this)
@@ -47,7 +46,6 @@ class AllCoursesFragment : Fragment(), CourseItemOperations {
                 getCourses()
             }
         }
-
         viewModel.allCoursesResponse.observe(viewLifecycleOwner) { response ->
             when (response) {
                 is NetworkResult.Loading -> {
@@ -81,10 +79,8 @@ class AllCoursesFragment : Fragment(), CourseItemOperations {
                 }
             }
         }
-
         return root
     }
-
     private fun getCourses() {
         if (args.backFromFilter) {
             viewModel.apply {
@@ -99,7 +95,6 @@ class AllCoursesFragment : Fragment(), CourseItemOperations {
         super.onDestroyView()
         _binding = null
     }
-
     override fun onCourseClicked(course: Course) {
         super.onCourseClicked(course)
         val action =
@@ -110,5 +105,4 @@ class AllCoursesFragment : Fragment(), CourseItemOperations {
             e.printStackTrace()
         }
     }
-
 }

@@ -35,6 +35,6 @@
 
     <color name="chip_fav_background_checked">#30E46A50</color>
     <color name="chip_fav_text_color_checked">@color/red_AE2103</color>
-
+    <color name="gray">#c9c1a9</color>
     <color name="action_mode_selected">@color/chip_background_checked</color>
 </resources>

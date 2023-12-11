@@ -16,7 +16,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class CartFragment : Fragment() {
-
     private var _binding: FragmentCartBinding? = null
     private val binding get() = _binding!!
     private val viewModel: CartViewModel by viewModels()
@@ -46,14 +45,12 @@ class CartFragment : Fragment() {
             if (cartEntity.isNotEmpty()) {
                 val courses = cartEntity.map { it.course }
                 val coursesPrice = calculateCoursesPrice(courses)
-
                 with(binding) {
                     rvCourses.adapter = cartAdapter
                     errorLayout.invisible()
                     rvCourses.visible()
                     tvTotal.text = "Total: ${coursesPrice.sum()}"
                 }
-
                 cartAdapter.setData(cartEntity)
                 binding.rvCourses.adapter = cartAdapter
             } else {
@@ -65,7 +62,6 @@ class CartFragment : Fragment() {
             }
         }
     }
-
     private fun calculateCoursesPrice(courses: List<Course>): List<Float> {
         return courses.mapNotNull { course ->
             try {

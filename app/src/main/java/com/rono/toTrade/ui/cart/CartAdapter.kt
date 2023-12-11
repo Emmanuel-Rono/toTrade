@@ -12,14 +12,15 @@ import com.rono.toTrade.R
 import com.rono.toTrade.app.loadImageWithPicasso
 import com.rono.toTrade.dataSources.local.room.entities.CartEntity
 
-open class CartAdapter(private val cartViewModel: CartViewModel) :
+//open class CartAdapter(private val cartViewModel: CartViewModel) :RecyclerView.Adapter<CartAdapter.MainCoursesVH>() {
 //open class CartAdapter(private val cartViewModel: CartViewModel, var BuyClickListener: onViewClickListener) :
-    RecyclerView.Adapter<CartAdapter.MainCoursesVH>() {
+//interface onViewClickListener {
+// fun onBuyBtnClicked( item:CartEntity)
+// }
     //CLick Listener interface
+open class CartAdapter(private val cartViewModel: CartViewModel) :
+    RecyclerView.Adapter<CartAdapter.MainCoursesVH>() {
     private var data: List<CartEntity?>? = mutableListOf()
-    //interface onViewClickListener {
-    //    fun onBuyBtnClicked( item:CartEntity)
-   // }
     class MainCoursesVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvCourseName: TextView = itemView.findViewById(R.id.tv_course_name)
         val tvInstructors: TextView = itemView.findViewById(R.id.tv_instructors)
@@ -29,36 +30,29 @@ open class CartAdapter(private val cartViewModel: CartViewModel) :
         val btBuy: Button = itemView.findViewById(R.id.bt_buy)
         val btRemove: Button = itemView.findViewById(R.id.bt_remove)
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainCoursesVH {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_course_cart, parent, false)
         return MainCoursesVH(view)
     }
-
     override fun onBindViewHolder(holder: MainCoursesVH, position: Int) {
         val current = data?.get(position)
-
         holder.apply {
             tvCourseName.text = current?.course?.title.toString()
-            tvInstructors.text = current?.course?.visibleInstructors?.getOrNull(0)?.displayName ?: ""
+            tvInstructors.text =
+                current?.course?.visibleInstructors?.getOrNull(0)?.displayName ?: ""
             tvCoursePrice.text = current?.course?.price.toString()
             ivCourse.loadImageWithPicasso(current?.course?.image240x135.toString())
-            ivInstructor.loadImageWithPicasso(current?.course?.visibleInstructors?.getOrNull(0)?.image50x50.toString()
+            ivInstructor.loadImageWithPicasso(
+                current?.course?.visibleInstructors?.getOrNull(0)?.image50x50.toString()
             )
             btRemove.setOnClickListener {
                 if (current != null) {
                     cartViewModel.deleteCourseFromCart(current)
                 }
             }
-            btBuy.setOnClickListener {
-                if (current != null) {
-
-                }
-            }
         }
     }
-
     override fun getItemCount(): Int = data?.size ?: 0
 
     fun setData(list: List<CartEntity?>?) {
