@@ -84,9 +84,7 @@ dependencies {
     //noinspection GradleDependency
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle_ver}"
     // Picasso
-    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation "androidx.datastore:datastore-preferences:1.0.0"
-
     implementation 'com.google.android.material:material:1.10.0'
-
 }

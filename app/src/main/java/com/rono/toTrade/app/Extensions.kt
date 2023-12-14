@@ -6,6 +6,7 @@ import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.Drawable
+import android.icu.number.NumberRangeFormatter.with
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
@@ -69,11 +70,9 @@ fun ImageView.loadImageWithPicasso(imageUri: String) {
         .error(R.drawable.error)
         .into(this);
 }
-
 fun Application.loadDrawable(@DrawableRes id: Int): Drawable {
     return AppCompatResources.getDrawable(applicationContext, id)!!
 }
-
 fun Context.loadColor(@ColorRes id: Int): Int {
     return try {
         getColor(id)

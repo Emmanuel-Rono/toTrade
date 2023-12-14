@@ -29,4 +29,42 @@
         <item name="android:textColor">@color/chip_fav_text_color</item>
         <item name="checkedIconTint">@color/chip_fav_text_color</item>
     </style>
+
+    <style name="ClickableTextViewStyle" parent="AppTheme">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:foreground">?android:selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="TextStyle.H0" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="ButtonStyle.Rounded" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/background_button_rounded</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ButtonStyle.Rectangle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/background_button_rectangle</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">5dp</item>
+        <item name="boxCornerRadiusBottomStart">5dp</item>
+        <item name="boxCornerRadiusTopEnd">5dp</item>
+        <item name="boxCornerRadiusTopStart">5dp</item>
+    </style>
+
+    <style name="TextInputEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:paddingStart">12dp</item>
+    </style>
 </resources>

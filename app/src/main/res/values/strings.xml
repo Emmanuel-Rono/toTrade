@@ -64,4 +64,22 @@
     <string name="course_added_to_cart">Course added to cart</string>
     <string name="removed_from_cart">Course removed from cart.</string>
     <string name="privacy_policy">Privacy policy</string>
+	
+    <string name="login_tiet_email">Email</string>
+    <string name="login_tiet_password">Password</string>
+    <string name="login_tv_forgot_your_password">Forgot your password?</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_tv_sign_up_here">Don\'t have an account? <b>Sign up here</b></string>
+    <string name="sign_up_tiet_full_name">Full name</string>
+    <string name="sign_up_tiet_email">Email</string>
+    <string name="sign_up_tiet_password">Password</string>
+    <string name="sign_up_btn_sign_up">Sign up</string>
+    <string name="sign_up_tv_login_here">Already have an account? <b>Login here</b></string>
+    <string name="home_tv_welcome">Good %s,\n%s!</string>
+    <string name="home_btn_logout">Logout</string>
+    <string name="sign_up_error_null">Fill this field</string>
+    <string name="sign_up_error_password_unsafe">Password must be at least 6 characters length</string>
+    <string name="sign_up_error_email_invalid">Email invalid</string>
+    <string name="login_error_null">Fill this field</string>
+    <string name="login_error_email_invalid">Email invalid</string>
 </resources>

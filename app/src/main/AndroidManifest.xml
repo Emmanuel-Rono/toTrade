@@ -17,18 +17,13 @@
         android:theme="@style/Theme.2Trade"
         tools:targetApi="31">
         <activity
-            android:name="com.rono.toTrade.OnboardingScreenActivity"
+            android:name="com.rono.toTrade.MainActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.rono.toTrade.MainActivity"
-            android:exported="true"
-            android:label="@string/app_name">
 
         </activity>
         <meta-data
