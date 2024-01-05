@@ -37,4 +37,5 @@
     <color name="chip_fav_text_color_checked">@color/red_AE2103</color>
 
     <color name="action_mode_selected">@color/chip_background_checked</color>
+
 </resources>

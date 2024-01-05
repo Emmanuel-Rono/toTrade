@@ -9,28 +9,33 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.panjikrisnayasa.bigproject.SignUpActivity
-import kotlinx.android.synthetic.main.activity_login.*
+import com.rono.toTrade.databinding.ActivityLoginBinding
 import java.util.regex.Pattern
 
-class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
 
+class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     companion object {
         const val RC_SIGN_UP = 1
     }
 
     private lateinit var mAuth: FirebaseAuth
+    lateinit var loginBinding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-
+        loginBinding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(loginBinding.root)
         supportActionBar?.title = "Login to toTrade"
 
-        tv_login_sign_up_here.setOnClickListener(this)
-        btn_login_login.setOnClickListener(this)
-        tiet_login_password.addTextChangedListener(this)
+        loginBinding.tvLoginSignUpHere.setOnClickListener(this)
+        loginBinding.btnLoginLogin.setOnClickListener(this)
+        loginBinding.tietLoginPassword.addTextChangedListener(this)
 
         mAuth = FirebaseAuth.getInstance()
     }
@@ -39,7 +44,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
         super.onStart()
         val currentUser = mAuth.currentUser
         if (currentUser != null) {
-            val homeIntent = Intent(this, HomeActivity::class.java)
+            val homeIntent = Intent(this, MainActivity::class.java)
             startActivity(homeIntent)
             finish()
         }
@@ -47,13 +52,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == RC_SIGN_UP) {
-            if (resultCode == Activity.RESULT_OK) {
-                val registeredEmail = data?.getStringExtra(SignUpActivity.EXTRA_EMAIL)
-                if (registeredEmail != null) {
-                    tiet_login_email.setText(registeredEmail, TextView.BufferType.EDITABLE)
-                    tiet_login_email.setSelection(registeredEmail.length)
-                }
+        if (requestCode == RC_SIGN_UP && resultCode == Activity.RESULT_OK) {
+            val registeredEmail = data?.getStringExtra(SignUpActivity.EXTRA_EMAIL)
+            registeredEmail?.let {
+                loginBinding.tietLoginEmail.setText(it, TextView.BufferType.EDITABLE)
+                loginBinding.tietLoginEmail.setSelection(it.length)
             }
         }
     }
@@ -63,19 +66,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
             R.id.tv_login_sign_up_here -> {
                 val signUpIntent = Intent(this, SignUpActivity::class.java)
                 startActivityForResult(signUpIntent, RC_SIGN_UP)
-                tiet_login_email.text?.clear()
-                tiet_login_email.error = null
-                tiet_login_password.text?.clear()
-                tiet_login_password.error = null
+                clearLoginFields()
             }
             R.id.btn_login_login -> {
                 var isNull = false
                 var isEmailInvalid = false
 
-                val email = tiet_login_email.text.toString()
-                val password = tiet_login_password.text.toString()
+                val email = loginBinding.tietLoginEmail.text.toString()
+                val password = loginBinding.tietLoginPassword.text.toString()
 
-                //email address validation
+                // Email address validation
                 val pattern = Pattern.compile(
                     "^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\\.([a-zA-Z])+([a-zA-Z])+",
                     Pattern.CASE_INSENSITIVE
@@ -84,32 +84,31 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
 
                 if (!email.isNotBlank()) {
                     isNull = true
-                    tiet_login_email.error = getString(R.string.login_error_null)
+                    loginBinding.tietLoginEmail.error = getString(R.string.login_error_null)
                 } else if (!matcher.matches()) {
                     isEmailInvalid = true
-                    tiet_login_email.error = getString(R.string.login_error_email_invalid)
+                    loginBinding.tietLoginEmail.error =
+                        getString(R.string.login_error_email_invalid)
                 }
                 if (!password.isNotBlank()) {
                     isNull = true
-                    til_login_password.isPasswordVisibilityToggleEnabled = false
-                    tiet_login_password.error = getString(R.string.login_error_null)
+                    loginBinding.tietLoginPassword.error = getString(R.string.login_error_null)
                 }
 
                 if (!isNull && !isEmailInvalid) {
                     mAuth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener {
+                        .addOnCompleteListener { task: Task<AuthResult> ->
                             val cUser = mAuth.currentUser
-                            if (it.isSuccessful) {
+                            if (task.isSuccessful) {
                                 if (!cUser?.isEmailVerified!!) {
                                     Toast.makeText(
                                         this,
                                         "You need to verify your email address",
                                         Toast.LENGTH_SHORT
-                                    )
-                                        .show()
+                                    ).show()
                                     mAuth.signOut()
                                 } else {
-                                    val homeIntent = Intent(this, HomeActivity::class.java)
+                                    val homeIntent = Intent(this, MainActivity::class.java)
                                     startActivity(homeIntent)
                                     finish()
                                 }
@@ -118,8 +117,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
                                     this,
                                     "Email or password incorrect",
                                     Toast.LENGTH_SHORT
-                                )
-                                    .show()
+                                ).show()
                             }
                         }
                 }
@@ -127,11 +125,20 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
         }
     }
 
+    private fun clearLoginFields() {
+        loginBinding.tietLoginEmail.text?.clear()
+        loginBinding.tietLoginEmail.error = null
+        loginBinding.tietLoginPassword.text?.clear()
+        loginBinding.tietLoginPassword.error = null
+    }
+
     override fun afterTextChanged(s: Editable?) {}
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-        til_login_password.isPasswordVisibilityToggleEnabled = true
+        // Handle any pre-text change logic here
     }
 
-    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        // Handle any text change logic here
+    }
 }

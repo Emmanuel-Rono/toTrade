@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.rono.toTrade.LoginActivity
+import com.rono.toTrade.R
+import com.rono.toTrade.dataStructures.reviews.User
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import java.util.regex.Pattern
 

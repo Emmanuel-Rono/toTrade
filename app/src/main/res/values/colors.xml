@@ -6,6 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
 
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey_818181">#818181</color>
@@ -38,4 +39,12 @@
     <color name="gray">#c9c1a9</color>
     <color name="action_mode_selected">@color/chip_background_checked</color>
     <color name="colorAccent">#6ab7ff</color>
+    <color name="colorRipple">?colorControlHighlight</color>>
+
+    <color name="colorPrimary">#1e88e5</color>
+    <color name="colorPrimaryDark">#005cb2</color>
+    <color name="colorImageDarkOpacity">#42000000</color>
+
 </resources>
+
+
