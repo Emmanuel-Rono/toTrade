@@ -50,6 +50,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_SIGN_UP && resultCode == Activity.RESULT_OK) {

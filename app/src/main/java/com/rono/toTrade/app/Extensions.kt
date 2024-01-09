@@ -6,6 +6,7 @@ import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.Drawable
+import android.icu.number.NumberFormatter.with
 import android.icu.number.NumberRangeFormatter.with
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -65,7 +66,7 @@ fun Activity.showSnackBar(
 }
 
 fun ImageView.loadImageWithPicasso(imageUri: String) {
-    Picasso.with(context).load(imageUri).fit().centerCrop()
+    Picasso.get().load(imageUri).fit().centerCrop()
         .placeholder(R.drawable.image_gallery)
         .error(R.drawable.error)
         .into(this);
@@ -120,9 +121,9 @@ fun View.visible() {
     this.visibility = View.VISIBLE
 }
 
-fun View.gone() {
-    this.visibility = View.GONE
-}
+//fun View.gone() {
+   // this.visibility = View.GONE
+//}
 fun Context.viewLink(url: String) {
     try {
         val browserIntent =

@@ -5,18 +5,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+
 import com.rono.toTrade.LoginActivity
 import com.rono.toTrade.R
 import com.rono.toTrade.dataStructures.reviews.User
 import com.rono.toTrade.databinding.ActivitySignUpBinding
+
 import java.util.regex.Pattern
+
 
 class SignUpActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
 
@@ -25,8 +26,8 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     }
 
     private lateinit var mAuth: FirebaseAuth
-    private lateinit var mUserDatabaseReference: DatabaseReference
-    private lateinit var binding: ActivitySignUpBinding
+   // private lateinit var mUserDatabaseReference: DatabaseReference
+    private lateinit var binding:ActivitySignUpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,26 +37,12 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
         supportActionBar?.title = "Sign Up to Appskie"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.tvSignUpLoginHere.setOnClickListener(this)
+       binding.tvSignUpLoginHere.setOnClickListener(this)
         binding.btnSignUpSignUp.setOnClickListener(this)
         binding.tietSignUpPassword.addTextChangedListener(this)
 
         mAuth = FirebaseAuth.getInstance()
-        mUserDatabaseReference = FirebaseDatabase.getInstance().getReference("users")
-
-        // Set OnClickListener for password visibility
-        binding.ivSignUpTogglePassword.setOnClickListener {
-            // Toggle password visibility
-            val isPasswordVisible = binding.tietSignUpPassword.transformationMethod == null
-            binding.tietSignUpPassword.transformationMethod =
-                if (isPasswordVisible) null else PasswordTransformationMethod.getInstance()
-
-            // Change the icon accordingly
-            binding.ivSignUpTogglePassword.setImageResource(
-                if (isPasswordVisible) R.drawable.ic_password_visible
-                else R.drawable.ic_password_hidden
-            )
-        }
+        //mUserDatabaseReference = FirebaseDatabase.getInstance().getReference("users")
     }
 
     override fun onClick(v: View?) {
@@ -89,18 +76,24 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
                     binding.tietSignUpEmail.error = getString(R.string.sign_up_error_null)
                 } else if (!matcher.matches()) {
                     isEmailInvalid = true
-                    binding.tietSignUpEmail.error =
-                        getString(R.string.sign_up_error_email_invalid)
+                    binding.tietSignUpEmail.error = getString(R.string.sign_up_error_email_invalid)
                 }
 
-                if (!password.isNotBlank()) {
+                val passwordTextInputLayout = binding.tilSignUpPassword
+
+                if (password.isBlank()) {
                     isNull = true
-                    binding.tietSignUpPassword.error = getString(R.string.sign_up_error_null)
+                    passwordTextInputLayout.endIconMode = TextInputLayout.END_ICON_NONE  // Disable toggle
+                    passwordTextInputLayout.error = getString(R.string.sign_up_error_null)
                 } else if (password.length < 6) {
                     isPasswordUnsafe = true
-                    binding.tietSignUpPassword.error =
-                        getString(R.string.sign_up_error_password_unsafe)
+                    passwordTextInputLayout.endIconMode = TextInputLayout.END_ICON_NONE  // Disable toggle
+                    passwordTextInputLayout.error = getString(R.string.sign_up_error_password_unsafe)
+                } else {
+                    passwordTextInputLayout.endIconMode = TextInputLayout.END_ICON_PASSWORD_TOGGLE  // Enable toggle
+                    passwordTextInputLayout.error = null  // Clear any previous errors
                 }
+
 
                 if (!isNull && !isPasswordUnsafe && !isEmailInvalid) {
                     mAuth.createUserWithEmailAndPassword(email, password)
@@ -108,8 +101,8 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
                             if (it.isSuccessful) {
                                 val cUser = mAuth.currentUser
                                 if (cUser != null) {
-                                    val user = User(cUser.uid, fullName, email)
-                                    mUserDatabaseReference.child(cUser.uid).setValue(user)
+                                    //val user = User(cUser.uid, fullName, email)
+                                   // mUserDatabaseReference.child(cUser.uid).setValue(user)
 
                                     cUser.sendEmailVerification().addOnCompleteListener { that ->
                                         if (that.isSuccessful) {
@@ -134,11 +127,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
                                     }
                                 }
                             } else {
-                                Toast.makeText(
-                                    this,
-                                    "Sign up failed, please try again",
-                                    Toast.LENGTH_SHORT
-                                ).show()
+                                Toast.makeText(this, "Sign up failed, please try again", Toast.LENGTH_SHORT).show()
                             }
                         }
                 }
@@ -149,9 +138,14 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     override fun afterTextChanged(s: Editable?) {}
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-        // Set password visibility toggle to true when text changes
-        binding.tietSignUpPassword.isPasswordVisibilityToggleEnabled = true
-    }
+        // Access the TextInputLayout directly for clarity
+        val passwordTextInputLayout = binding.tilSignUpPassword
 
+        // Enable toggle by default before text changes
+        passwordTextInputLayout.endIconMode = TextInputLayout.END_ICON_PASSWORD_TOGGLE
+
+        // Consider removing errors before text changes, if applicable
+        passwordTextInputLayout.error = null
+    }
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 }
