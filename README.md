@@ -6,9 +6,9 @@ e-Learnip Platform for anyone who wants to learn Forex and Financial Markets, in
 
 <p align="middle">
   <img width="200" src= "https://github.com/Emmanuel-Rono/toTrade/blob/main/screenshots/t-home.jpg">
-  <img width="200" src="https://github.com/Emmanuel-Rono/toTrade/blob/main/screenshots/t-search.jpg">
+  <img width="200" src="https://github.com/Emmanuel-Rono/toTrade/blob/main/screenshots/t-wish.jpg">
   <img width="200" src="https://github.com/Emmanuel-Rono/toTrade/blob/main/screenshots/t-searc1.jpg">
-  <img width="200" src=" https://github.com/Emmanuel-Rono/toTrade/blob/main/screenshots/t-wish.jpg">
+  <img width="200" src="https://github.com/Emmanuel-Rono/toTrade/blob/main/screenshots/t-Ict.jpg">
 </p>
 
 ## Architecture
